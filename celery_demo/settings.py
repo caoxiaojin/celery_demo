@@ -135,7 +135,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CELERY_BROKER_URL = 'redis://:%s@%s:%s/1' %(config.REDIS_PASSWROD,config.REDIS_HOST,config.REDIS_PORT)
+CELERY_BROKER_URL = 'redis://:%s@%s:%s/1' %(config.REDIS_PASSWORD,config.REDIS_HOST,config.REDIS_PORT)
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_RESULT_BACKEND = 'django-db'   # 数据保存在mysql中
 CELERY_TASK_SERIALIZER = 'json'
